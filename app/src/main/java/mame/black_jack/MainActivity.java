@@ -19,290 +19,371 @@ public class MainActivity extends AppCompatActivity {
 
     public static class num {
         public static int sum = 0;
-        public static int a = 0;
-        public static int aa = 0;
-        public static int b = 0;
-        public static int bb = 0;
+        public static int start1_random_num = 0;
+        public static int start1_display_num = 0;
+        public static int start2_random_num = 0;
+        public static int start2_display_num = 0;
+        public static int hit1_random_num = 0;
+        public static int hit1_display_num = 0;
+        public static int hit2_random_num = 0;
+        public static int hit2_display_num = 0;
+        public static int hit3_random_num = 0;
+        public static int hit3_display_num = 0;
+        public static int hit4_random_num = 0;
+        public static int hit4_display_num = 0;
+        public static int hit5_random_num = 0;
+        public static int hit5_display_num = 0;
     }
 
     public void imageDisplayInitialize() {
 
         //Text
-        final TextView sumLabel = findViewById(R.id.textView);
+        final TextView sumLabel = findViewById(R.id.sumView);
         sumLabel.setText("合計 : 0");
+        final TextView sonLabel = findViewById(R.id.sonView);
+        sonLabel.setText("");
 
         //Button
-        final Button start = (Button) findViewById(R.id.start);
-        final Button hit = (Button) findViewById(R.id.hit);
-        final Button stand = (Button) findViewById(R.id.stand);
-        final Button reset= (Button) findViewById(R.id.reset);
+        final Button startButton = (Button) findViewById(R.id.startButton);
+        final Button hitButton = (Button) findViewById(R.id.hitButton);
+        final Button standButton = (Button) findViewById(R.id.standButton);
+        final Button resetButton = (Button) findViewById(R.id.resetButton);
 
         //Image
-        final ImageView img1 = findViewById(R.id.imageView1);
-        img1.setImageResource(R.drawable.a);
-        final ImageView img2 = findViewById(R.id.imageView2);
-        img2.setImageResource(R.drawable.a);
-        final ImageView img3 = findViewById(R.id.imageView3);
-        img3.setImageResource(R.drawable.a);
-        final ImageView img4 = findViewById(R.id.imageView4);
-        img4.setImageResource(R.drawable.a);
-        final ImageView img5 = findViewById(R.id.imageView5);
-        img5.setImageResource(R.drawable.a);
-        final ImageView img6 = findViewById(R.id.imageView6);
-        img6.setImageResource(R.drawable.a);
-        final ImageView img7 = findViewById(R.id.imageView7);
-        img7.setImageResource(R.drawable.a);
+        final ImageView startImg1 = findViewById(R.id.startView1);
+        startImg1.setImageResource(R.drawable.card0);
+        final ImageView startImg2 = findViewById(R.id.startView2);
+        startImg2.setImageResource(R.drawable.card0);
+        final ImageView hitImg1 = findViewById(R.id.hitView1);
+        hitImg1.setImageResource(R.drawable.card0);
+        final ImageView hitImg2 = findViewById(R.id.hitView2);
+        hitImg2.setImageResource(R.drawable.card0);
+        final ImageView hitImg3 = findViewById(R.id.hitView3);
+        hitImg3.setImageResource(R.drawable.card0);
+        final ImageView hitImg4 = findViewById(R.id.hitView4);
+        hitImg4.setImageResource(R.drawable.card0);
+        final ImageView hitImg5 = findViewById(R.id.hitView5);
+        hitImg5.setImageResource(R.drawable.card0);
 
 
         final Random r = new Random();
 
-        start.setOnClickListener(new View.OnClickListener() {
+        startButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
-                num.a = r.nextInt(13) + 1;
-                if (num.a == 1) {
-                    img1.setImageResource(R.drawable.b);
-                } else if (num.a == 2) {
-                    img1.setImageResource(R.drawable.c);
-                } else if (num.a == 3) {
-                    img1.setImageResource(R.drawable.d);
-                } else if (num.a == 4) {
-                    img1.setImageResource(R.drawable.e);
-                } else if (num.a == 5) {
-                    img1.setImageResource(R.drawable.f);
-                } else if (num.a == 6) {
-                    img1.setImageResource(R.drawable.g);
-                } else if (num.a == 7) {
-                    img1.setImageResource(R.drawable.h);
-                } else if (num.a == 8) {
-                    img1.setImageResource(R.drawable.i);
-                } else if (num.a == 9) {
-                    img1.setImageResource(R.drawable.j);
-                } else if (num.a == 10) {
-                    img1.setImageResource(R.drawable.k);
-                } else if (num.a == 11) {
-                    img1.setImageResource(R.drawable.l);
-                } else if (num.a == 12) {
-                    img1.setImageResource(R.drawable.m);
-                } else if (num.a == 13) {
-                    img1.setImageResource(R.drawable.n);
+                num.start1_random_num = r.nextInt(13) + 1;
+                if (num.start1_random_num == 1) {
+                    startImg1.setImageResource(R.drawable.card1);
+                } else if (num.start1_random_num == 2) {
+                    startImg1.setImageResource(R.drawable.card2);
+                } else if (num.start1_random_num == 3) {
+                    startImg1.setImageResource(R.drawable.card3);
+                } else if (num.start1_random_num == 4) {
+                    startImg1.setImageResource(R.drawable.card4);
+                } else if (num.start1_random_num == 5) {
+                    startImg1.setImageResource(R.drawable.card5);
+                } else if (num.start1_random_num == 6) {
+                    startImg1.setImageResource(R.drawable.card6);
+                } else if (num.start1_random_num == 7) {
+                    startImg1.setImageResource(R.drawable.card7);
+                } else if (num.start1_random_num == 8) {
+                    startImg1.setImageResource(R.drawable.card8);
+                } else if (num.start1_random_num == 9) {
+                    startImg1.setImageResource(R.drawable.card9);
+                } else if (num.start1_random_num == 10) {
+                    startImg1.setImageResource(R.drawable.card10);
+                } else if (num.start1_random_num == 11) {
+                    startImg1.setImageResource(R.drawable.card11);
+                } else if (num.start1_random_num == 12) {
+                    startImg1.setImageResource(R.drawable.card12);
+                } else if (num.start1_random_num == 13) {
+                    startImg1.setImageResource(R.drawable.card13);
                 }
-                if (num.a >= 10) {
-                    num.aa = 10;
+                if (num.start1_random_num >= 10) {
+                    num.start1_display_num = 10;
                 } else {
-                    num.aa = num.a;
+                    num.start1_display_num = num.start1_random_num;
                 }
-                num.b = r.nextInt(13) + 1;
-                if (num.b == 1) {
-                    img2.setImageResource(R.drawable.b);
-                } else if (num.b == 2) {
-                    img2.setImageResource(R.drawable.c);
-                } else if (num.b == 3) {
-                    img2.setImageResource(R.drawable.d);
-                } else if (num.b == 4) {
-                    img2.setImageResource(R.drawable.e);
-                } else if (num.b == 5) {
-                    img2.setImageResource(R.drawable.f);
-                } else if (num.b== 6) {
-                    img2.setImageResource(R.drawable.g);
-                } else if (num.b == 7) {
-                    img2.setImageResource(R.drawable.h);
-                } else if (num.b == 8) {
-                    img2.setImageResource(R.drawable.i);
-                } else if (num.b == 9) {
-                    img2.setImageResource(R.drawable.j);
-                } else if (num.b == 10) {
-                    img2.setImageResource(R.drawable.k);
-                } else if (num.b == 11) {
-                    img2.setImageResource(R.drawable.l);
-                } else if (num.b == 12) {
-                    img2.setImageResource(R.drawable.m);
-                } else if (num.b == 13) {
-                    img2.setImageResource(R.drawable.n);
+                num.sum += num.start1_display_num;
+
+                num.start2_random_num = r.nextInt(13) + 1;
+                if (num.start2_random_num == 1) {
+                    startImg2.setImageResource(R.drawable.card1);
+                } else if (num.start2_random_num == 2) {
+                    startImg2.setImageResource(R.drawable.card2);
+                } else if (num.start2_random_num == 3) {
+                    startImg2.setImageResource(R.drawable.card3);
+                } else if (num.start2_random_num == 4) {
+                    startImg2.setImageResource(R.drawable.card4);
+                } else if (num.start2_random_num == 5) {
+                    startImg2.setImageResource(R.drawable.card5);
+                } else if (num.start2_random_num == 6) {
+                    startImg2.setImageResource(R.drawable.card6);
+                } else if (num.start2_random_num == 7) {
+                    startImg2.setImageResource(R.drawable.card7);
+                } else if (num.start2_random_num == 8) {
+                    startImg2.setImageResource(R.drawable.card8);
+                } else if (num.start2_random_num == 9) {
+                    startImg2.setImageResource(R.drawable.card9);
+                } else if (num.start2_random_num == 10) {
+                    startImg2.setImageResource(R.drawable.card10);
+                } else if (num.start2_random_num == 11) {
+                    startImg2.setImageResource(R.drawable.card11);
+                } else if (num.start2_random_num == 12) {
+                    startImg2.setImageResource(R.drawable.card12);
+                } else if (num.start2_random_num == 13) {
+                    startImg2.setImageResource(R.drawable.card13);
                 }
-                if (num.b >= 10) {
-                    num.bb = 10;
+                if (num.start2_random_num >= 10) {
+                    num.start2_display_num = 10;
                 } else {
-                    num.bb = num.b;
+                    num.start2_display_num = num.start2_random_num;
                 }
-                num.sum = num.aa + num.bb;
+                num.sum += num.start2_display_num;
+
+                sumLabel.setText("合計 : " + num.sum);
+
+                if ((num.start1_display_num == 1) && (num.start2_display_num == 10)) {
+                    sonLabel.setText("Black Jack!!");
+                } else if ((num.start1_display_num == 10) && (num.start2_display_num == 1)) {
+                    sonLabel.setText("Black Jack!!");
+                }
             }
         });
-
-        sumLabel.setText("合計 : " + num.sum);
-
-        hit.setOnClickListener(new View.OnClickListener() {
+        
+        hitButton.setOnClickListener(new View.OnClickListener() {
             int i = 0;
             @Override public void onClick(View view) {
                 if (i == 0) {
-                    i = 1;
-                    int x = (int) (Math.random() * 13) + 1;
-                    if (x == 1) {
-                        img3.setImageResource(R.drawable.b);
-                    } else if (x == 2) {
-                        img3.setImageResource(R.drawable.c);
-                    } else if (x == 3) {
-                        img3.setImageResource(R.drawable.d);
-                    } else if (x == 4) {
-                        img3.setImageResource(R.drawable.e);
-                    } else if (x == 5) {
-                        img3.setImageResource(R.drawable.f);
-                    } else if (x == 6) {
-                        img3.setImageResource(R.drawable.g);
-                    } else if (x == 7) {
-                        img3.setImageResource(R.drawable.h);
-                    } else if (x == 8) {
-                        img3.setImageResource(R.drawable.i);
-                    } else if (x == 9) {
-                        img3.setImageResource(R.drawable.j);
-                    } else if (x == 10) {
-                        img3.setImageResource(R.drawable.k);
-                    } else if (x == 11) {
-                        img3.setImageResource(R.drawable.l);
-                    } else if (x == 12) {
-                        img3.setImageResource(R.drawable.m);
-                    } else if (x == 13) {
-                        img3.setImageResource(R.drawable.n);
+                    i = 1;num.hit1_random_num = r.nextInt(13) + 1;
+                    if (num.hit1_random_num == 1) {
+                        hitImg1.setImageResource(R.drawable.card1);
+                    } else if (num.hit1_random_num == 2) {
+                        hitImg1.setImageResource(R.drawable.card2);
+                    } else if (num.hit1_random_num == 3) {
+                        hitImg1.setImageResource(R.drawable.card3);
+                    } else if (num.hit1_random_num == 4) {
+                        hitImg1.setImageResource(R.drawable.card4);
+                    } else if (num.hit1_random_num == 5) {
+                        hitImg1.setImageResource(R.drawable.card5);
+                    } else if (num.hit1_random_num == 6) {
+                        hitImg1.setImageResource(R.drawable.card6);
+                    } else if (num.hit1_random_num == 7) {
+                        hitImg1.setImageResource(R.drawable.card7);
+                    } else if (num.hit1_random_num == 8) {
+                        hitImg1.setImageResource(R.drawable.card8);
+                    } else if (num.hit1_random_num == 9) {
+                        hitImg1.setImageResource(R.drawable.card9);
+                    } else if (num.hit1_random_num == 10) {
+                        hitImg1.setImageResource(R.drawable.card10);
+                    } else if (num.hit1_random_num == 11) {
+                        hitImg1.setImageResource(R.drawable.card11);
+                    } else if (num.hit1_random_num == 12) {
+                        hitImg1.setImageResource(R.drawable.card12);
+                    } else if (num.hit1_random_num == 13) {
+                        hitImg1.setImageResource(R.drawable.card13);
+                    }
+                    if (num.hit1_random_num >= 10) {
+                        num.hit1_display_num = 10;
+                    } else {
+                        num.hit1_display_num = num.hit1_random_num;
+                    }
+                    num.sum += num.hit1_display_num;
+
+                    sumLabel.setText("合計 : " + num.sum);
+
+                    if (num.sum >= 22) {
+                        sonLabel.setText("Bust");
                     }
                 } else if (i == 1){
                     i = 2;
-                    int x = (int) (Math.random() * 13) + 1;
-                    if (x == 0) {
-                        img4.setImageResource(R.drawable.b);
-                    } else if (x == 2) {
-                        img4.setImageResource(R.drawable.c);
-                    } else if (x == 3) {
-                        img4.setImageResource(R.drawable.d);
-                    } else if (x == 4) {
-                        img4.setImageResource(R.drawable.e);
-                    } else if (x == 5) {
-                        img4.setImageResource(R.drawable.f);
-                    } else if (x == 6) {
-                        img4.setImageResource(R.drawable.g);
-                    } else if (x == 7) {
-                        img4.setImageResource(R.drawable.h);
-                    } else if (x == 8) {
-                        img4.setImageResource(R.drawable.i);
-                    } else if (x == 9) {
-                        img4.setImageResource(R.drawable.j);
-                    } else if (x == 10) {
-                        img4.setImageResource(R.drawable.k);
-                    } else if (x == 11) {
-                        img4.setImageResource(R.drawable.l);
-                    } else if (x == 12) {
-                        img4.setImageResource(R.drawable.m);
-                    } else if (x == 13) {
-                        img4.setImageResource(R.drawable.n);
+                    num.hit2_random_num = r.nextInt(13) + 1;
+                    if (num.hit2_random_num == 1) {
+                        hitImg2.setImageResource(R.drawable.card1);
+                    } else if (num.hit2_random_num == 2) {
+                        hitImg2.setImageResource(R.drawable.card2);
+                    } else if (num.hit2_random_num == 3) {
+                        hitImg2.setImageResource(R.drawable.card3);
+                    } else if (num.hit2_random_num == 4) {
+                        hitImg2.setImageResource(R.drawable.card4);
+                    } else if (num.hit2_random_num == 5) {
+                        hitImg2.setImageResource(R.drawable.card5);
+                    } else if (num.hit2_random_num == 6) {
+                        hitImg2.setImageResource(R.drawable.card6);
+                    } else if (num.hit2_random_num == 7) {
+                        hitImg2.setImageResource(R.drawable.card7);
+                    } else if (num.hit2_random_num == 8) {
+                        hitImg2.setImageResource(R.drawable.card8);
+                    } else if (num.hit2_random_num == 9) {
+                        hitImg2.setImageResource(R.drawable.card9);
+                    } else if (num.hit2_random_num == 10) {
+                        hitImg2.setImageResource(R.drawable.card10);
+                    } else if (num.hit2_random_num == 11) {
+                        hitImg2.setImageResource(R.drawable.card11);
+                    } else if (num.hit2_random_num == 12) {
+                        hitImg2.setImageResource(R.drawable.card12);
+                    } else if (num.hit2_random_num == 13) {
+                        hitImg2.setImageResource(R.drawable.card13);
+                    }
+                    if (num.hit2_random_num >= 10) {
+                        num.hit2_display_num = 10;
+                    } else {
+                        num.hit2_display_num = num.hit2_random_num;
+                    }
+                    num.sum += num.hit2_display_num;
+
+                    sumLabel.setText("合計 : " + num.sum);
+
+                    if (num.sum >= 22) {
+                        sonLabel.setText("Bust");
                     }
                 } else if (i == 2) {
                     i = 3;
-                    int x = (int) (Math.random() * 13) + 1;
-                    if (x == 0) {
-                        img5.setImageResource(R.drawable.b);
-                    } else if (x == 2) {
-                        img5.setImageResource(R.drawable.c);
-                    } else if (x == 3) {
-                        img5.setImageResource(R.drawable.d);
-                    } else if (x == 4) {
-                        img5.setImageResource(R.drawable.e);
-                    } else if (x == 5) {
-                        img5.setImageResource(R.drawable.f);
-                    } else if (x == 6) {
-                        img5.setImageResource(R.drawable.g);
-                    } else if (x == 7) {
-                        img5.setImageResource(R.drawable.h);
-                    } else if (x == 8) {
-                        img5.setImageResource(R.drawable.i);
-                    } else if (x == 9) {
-                        img5.setImageResource(R.drawable.j);
-                    } else if (x == 10) {
-                        img5.setImageResource(R.drawable.k);
-                    } else if (x == 11) {
-                        img5.setImageResource(R.drawable.l);
-                    } else if (x == 12) {
-                        img5.setImageResource(R.drawable.m);
-                    } else if (x == 13) {
-                        img5.setImageResource(R.drawable.n);
+                    num.hit3_random_num = r.nextInt(13) + 1;
+                    if (num.hit3_random_num == 1) {
+                        hitImg3.setImageResource(R.drawable.card1);
+                    } else if (num.hit3_random_num == 2) {
+                        hitImg3.setImageResource(R.drawable.card2);
+                    } else if (num.hit3_random_num == 3) {
+                        hitImg3.setImageResource(R.drawable.card3);
+                    } else if (num.hit3_random_num == 4) {
+                        hitImg3.setImageResource(R.drawable.card4);
+                    } else if (num.hit3_random_num == 5) {
+                        hitImg3.setImageResource(R.drawable.card5);
+                    } else if (num.hit3_random_num == 6) {
+                        hitImg3.setImageResource(R.drawable.card6);
+                    } else if (num.hit3_random_num == 7) {
+                        hitImg3.setImageResource(R.drawable.card7);
+                    } else if (num.hit3_random_num == 8) {
+                        hitImg3.setImageResource(R.drawable.card8);
+                    } else if (num.hit3_random_num == 9) {
+                        hitImg3.setImageResource(R.drawable.card9);
+                    } else if (num.hit3_random_num == 10) {
+                        hitImg3.setImageResource(R.drawable.card10);
+                    } else if (num.hit3_random_num == 11) {
+                        hitImg3.setImageResource(R.drawable.card11);
+                    } else if (num.hit3_random_num == 12) {
+                        hitImg3.setImageResource(R.drawable.card12);
+                    } else if (num.hit3_random_num == 13) {
+                        hitImg3.setImageResource(R.drawable.card13);
+                    }
+                    if (num.hit3_random_num >= 10) {
+                        num.hit3_display_num = 10;
+                    } else {
+                        num.hit3_display_num = num.hit3_random_num;
+                    }
+                    num.sum += num.hit3_display_num;
+
+                    sumLabel.setText("合計 : " + num.sum);
+
+                    if (num.sum >= 22) {
+                        sonLabel.setText("Bust");
                     }
                 } else if (i == 3) {
                     i = 4;
-                    int x = (int) (Math.random() * 13) + 1;
-                    if (x == 0) {
-                        img6.setImageResource(R.drawable.b);
-                    } else if (x == 2) {
-                        img6.setImageResource(R.drawable.c);
-                    } else if (x == 3) {
-                        img6.setImageResource(R.drawable.d);
-                    } else if (x == 4) {
-                        img6.setImageResource(R.drawable.e);
-                    } else if (x == 5) {
-                        img6.setImageResource(R.drawable.f);
-                    } else if (x == 6) {
-                        img6.setImageResource(R.drawable.g);
-                    } else if (x == 7) {
-                        img6.setImageResource(R.drawable.h);
-                    } else if (x == 8) {
-                        img6.setImageResource(R.drawable.i);
-                    } else if (x == 9) {
-                        img6.setImageResource(R.drawable.j);
-                    } else if (x == 10) {
-                        img6.setImageResource(R.drawable.k);
-                    } else if (x == 11) {
-                        img6.setImageResource(R.drawable.l);
-                    } else if (x == 12) {
-                        img6.setImageResource(R.drawable.m);
-                    } else if (x == 13) {
-                        img6.setImageResource(R.drawable.n);
+                    num.hit4_random_num = r.nextInt(13) + 1;
+                    if (num.hit4_random_num == 1) {
+                        hitImg4.setImageResource(R.drawable.card1);
+                    } else if (num.hit4_random_num == 2) {
+                        hitImg4.setImageResource(R.drawable.card2);
+                    } else if (num.hit4_random_num == 3) {
+                        hitImg4.setImageResource(R.drawable.card3);
+                    } else if (num.hit4_random_num == 4) {
+                        hitImg4.setImageResource(R.drawable.card4);
+                    } else if (num.hit4_random_num == 5) {
+                        hitImg4.setImageResource(R.drawable.card5);
+                    } else if (num.hit4_random_num == 6) {
+                        hitImg4.setImageResource(R.drawable.card6);
+                    } else if (num.hit4_random_num == 7) {
+                        hitImg4.setImageResource(R.drawable.card7);
+                    } else if (num.hit4_random_num == 8) {
+                        hitImg4.setImageResource(R.drawable.card8);
+                    } else if (num.hit4_random_num == 9) {
+                        hitImg4.setImageResource(R.drawable.card9);
+                    } else if (num.hit4_random_num == 10) {
+                        hitImg4.setImageResource(R.drawable.card10);
+                    } else if (num.hit4_random_num == 11) {
+                        hitImg4.setImageResource(R.drawable.card11);
+                    } else if (num.hit4_random_num == 12) {
+                        hitImg4.setImageResource(R.drawable.card12);
+                    } else if (num.hit4_random_num == 13) {
+                        hitImg4.setImageResource(R.drawable.card13);
+                    }
+                    if (num.hit4_random_num >= 10) {
+                        num.hit4_display_num = 10;
+                    } else {
+                        num.hit4_display_num = num.hit4_random_num;
+                    }
+                    num.sum += num.hit4_display_num;
+
+                    sumLabel.setText("合計 : " + num.sum);
+
+                    if (num.sum >= 22) {
+                        sonLabel.setText("Bust");
                     }
                 } else if (i == 4) {
                     i = 0;
-                    int x = (int) (Math.random() * 13) + 1;
-                    if (x == 0) {
-                        img7.setImageResource(R.drawable.b);
-                    } else if (x == 2) {
-                        img7.setImageResource(R.drawable.c);
-                    } else if (x == 3) {
-                        img7.setImageResource(R.drawable.d);
-                    } else if (x == 4) {
-                        img7.setImageResource(R.drawable.e);
-                    } else if (x == 5) {
-                        img7.setImageResource(R.drawable.f);
-                    } else if (x == 6) {
-                        img7.setImageResource(R.drawable.g);
-                    } else if (x == 7) {
-                        img7.setImageResource(R.drawable.h);
-                    } else if (x == 8) {
-                        img7.setImageResource(R.drawable.i);
-                    } else if (x == 9) {
-                        img7.setImageResource(R.drawable.j);
-                    } else if (x == 10) {
-                        img7.setImageResource(R.drawable.k);
-                    } else if (x == 11) {
-                        img7.setImageResource(R.drawable.l);
-                    } else if (x == 12) {
-                        img7.setImageResource(R.drawable.m);
-                    } else if (x == 13) {
-                        img7.setImageResource(R.drawable.n);
+                    num.hit5_random_num = r.nextInt(13) + 1;
+                    if (num.hit5_random_num == 1) {
+                        hitImg5.setImageResource(R.drawable.card1);
+                    } else if (num.hit5_random_num == 2) {
+                        hitImg5.setImageResource(R.drawable.card2);
+                    } else if (num.hit5_random_num == 3) {
+                        hitImg5.setImageResource(R.drawable.card3);
+                    } else if (num.hit5_random_num == 4) {
+                        hitImg5.setImageResource(R.drawable.card4);
+                    } else if (num.hit5_random_num == 5) {
+                        hitImg5.setImageResource(R.drawable.card5);
+                    } else if (num.hit5_random_num == 6) {
+                        hitImg5.setImageResource(R.drawable.card6);
+                    } else if (num.hit5_random_num == 7) {
+                        hitImg5.setImageResource(R.drawable.card7);
+                    } else if (num.hit5_random_num == 8) {
+                        hitImg5.setImageResource(R.drawable.card8);
+                    } else if (num.hit5_random_num == 9) {
+                        hitImg5.setImageResource(R.drawable.card9);
+                    } else if (num.hit5_random_num == 10) {
+                        hitImg5.setImageResource(R.drawable.card10);
+                    } else if (num.hit5_random_num == 11) {
+                        hitImg5.setImageResource(R.drawable.card11);
+                    } else if (num.hit5_random_num == 12) {
+                        hitImg5.setImageResource(R.drawable.card12);
+                    } else if (num.hit5_random_num == 13) {
+                        hitImg5.setImageResource(R.drawable.card13);
+                    }
+                    if (num.hit5_random_num >= 10) {
+                        num.hit5_display_num = 10;
+                    } else {
+                        num.hit5_display_num = num.hit5_random_num;
+                    }
+                    num.sum += num.hit5_display_num;
+
+                    sumLabel.setText("合計 : " + num.sum);
+
+                    if (num.sum >= 22) {
+                        sonLabel.setText("Bust");
                     }
                 }
             }
         });
 
-        stand.setOnClickListener(new View.OnClickListener() {
+        standButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
             }
         });
 
 
-        reset.setOnClickListener(new View.OnClickListener() {
+        resetButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
-                img1.setImageResource(R.drawable.a);
-                img2.setImageResource(R.drawable.a);
-                img3.setImageResource(R.drawable.a);
-                img4.setImageResource(R.drawable.a);
-                img5.setImageResource(R.drawable.a);
-                img6.setImageResource(R.drawable.a);
-                img7.setImageResource(R.drawable.a);
+                startImg1.setImageResource(R.drawable.card0);
+                startImg2.setImageResource(R.drawable.card0);
+                hitImg1.setImageResource(R.drawable.card0);
+                hitImg2.setImageResource(R.drawable.card0);
+                hitImg3.setImageResource(R.drawable.card0);
+                hitImg4.setImageResource(R.drawable.card0);
+                hitImg5.setImageResource(R.drawable.card0);
                 num.sum = 0;
+                sumLabel.setText("合計 : " + num.sum);
+                sonLabel.setText("");
             }
         });
     }

@@ -8,28 +8,41 @@
     android:orientation="vertical"
     android:gravity="center">
 
-    <TextView
-        android:id="@+id/textView"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:text="TextView" />
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/sumView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textSize="35dp"
+            android:text="SumLabel" />
+
+        <TextView
+            android:id="@+id/sonView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Black Jack!!"
+            android:textSize="35dp" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/imageView1"
+            android:id="@+id/startView1"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/a" />
+            app:srcCompat="@drawable/card0" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/startView2"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/a"/>
+            app:srcCompat="@drawable/card0"/>
     </LinearLayout>
 
     <LinearLayout
@@ -41,38 +54,38 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/hitView1"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/a" />
+                app:srcCompat="@drawable/card0" />
 
             <ImageView
-                android:id="@+id/imageView4"
+                android:id="@+id/hitView2"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="75dp"
-                app:srcCompat="@drawable/a"/>
+                app:srcCompat="@drawable/card0"/>
 
             <ImageView
-                android:id="@+id/imageView5"
+                android:id="@+id/hitView3"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="150dp"
-                app:srcCompat="@drawable/a"/>
+                app:srcCompat="@drawable/card0"/>
 
             <ImageView
-                android:id="@+id/imageView6"
+                android:id="@+id/hitView4"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="225dp"
-                app:srcCompat="@drawable/a" />
+                app:srcCompat="@drawable/card0" />
 
             <ImageView
-                android:id="@+id/imageView7"
+                android:id="@+id/hitView5"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="300dp"
-                app:srcCompat="@drawable/a"/>
+                app:srcCompat="@drawable/card0"/>
         </FrameLayout>
     </LinearLayout>
 
@@ -81,25 +94,25 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/start"
+            android:id="@+id/startButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Start"/>
 
         <Button
-            android:id="@+id/hit"
+            android:id="@+id/hitButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="HIT"/>
 
         <Button
-            android:id="@+id/stand"
+            android:id="@+id/standButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="STAND"/>
 
         <Button
-            android:id="@+id/reset"
+            android:id="@+id/resetButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="RESET"/>
